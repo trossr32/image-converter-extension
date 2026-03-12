@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-typescript-tailwind-template",
+  "name": "image-converter-extension",
   "version": "1.0.0",
-  "description": "Chrome Extension Template with TypeScript and Tailwind CSS",
+  "description": "An extension to convert images to different formats. Begone be the pain of downloading webp images!",
   "scripts": {
     "build": "webpack --config webpack.config.cjs",
     "watch": "webpack --config webpack.config.cjs --watch",
@@ -10,22 +10,21 @@
     "format": "prettier --write \"src/**/*.{ts,css}\""
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.260",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "autoprefixer": "^10.4.14",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.8.1",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "postcss": "^8.4.24",
-    "postcss-loader": "^7.3.3",
-    "prettier": "^2.8.8",
-    "style-loader": "^3.3.3",
-    "tailwindcss": "^3.3.2",
-    "ts-loader": "^9.4.3",
-    "typescript": "^5.0.4",
-    "webpack": "^5.82.1",
-    "webpack-cli": "^5.1.1"
+    "@types/chrome": "^0.1.37",
+    "@typescript-eslint/eslint-plugin": "^8.57.0",
+    "@typescript-eslint/parser": "^8.57.0",
+    "autoprefixer": "^10.4.27",
+    "copy-webpack-plugin": "^14.0.0",
+    "css-loader": "^7.1.4",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "postcss": "^8.5.8",
+    "postcss-loader": "^8.2.1",
+    "prettier": "^3.8.1",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^6.0.1"
   }
 }
