@@ -3,14 +3,15 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
+  // MV3 disallows eval in extension scripts; avoid webpack's dev default (eval source maps).
+  devtool: 'source-map',
   entry: {
     popup: './src/popup.ts',
-    background: './src/background.ts',
-    content: './src/content.ts',
+    background: './src/background.ts'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -22,8 +23,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
-      },
-    ],
+      }
+    ]
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -31,9 +32,8 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: 'public', to: '.' },
-        { from: 'src/index.css', to: 'index.css' }
-      ],
-    }),
-  ],
+        { from: 'public', to: '.' }
+      ]
+    })
+  ]
 }; 
